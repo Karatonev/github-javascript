@@ -14,5 +14,8 @@ jobs:
   InformationfromCustomAction:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repo
+        uses: actions/cehckout@v4
+
       - name: 'Run Custom Action'
         uses: ./.github/actions/javascript
