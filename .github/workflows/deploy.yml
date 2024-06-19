@@ -40,3 +40,5 @@ jobs:
     steps:
       - name: "Display ${{ matrix.version }} and ${{ matrix.os }}"
         run: echo "${{ matrix.version }} and ${{ matrix.os }}"
+      - name: "A step that is failing"
+        run: fail
