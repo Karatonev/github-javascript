@@ -19,3 +19,10 @@ jobs:
 
       - name: 'Run Custom Action'
         uses: ./.github/actions/javascript
+
+      - name: 'Display messages in groups'
+        run: |
+           echo "::group::Process"
+           echo "Starting"
+           echo "Cleaning Up"
+           echo "::endgroup::"
