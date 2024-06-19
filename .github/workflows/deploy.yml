@@ -28,4 +28,7 @@ jobs:
            echo "::endgroup::"
 
       - name: 'Try to display the token'
-        run: echo "${{ secrets.GITHUB_TOKEN }}"
+        run: |
+          echo "${{ github.token }}"
+          echo "${{ secrets.GITHUB_TOKEN }}"
+        
