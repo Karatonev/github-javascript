@@ -1,0 +1,13 @@
+name: "A workflow that should be triggered by the completion of another workflow"
+on:
+  workflow_run:
+    workflows: ["Build and deploy static website using AWS S3 as a backend"]
+    types:
+      - completed
+jobs:
+  test_job:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Display Something
+        run: echo "Sucess"
