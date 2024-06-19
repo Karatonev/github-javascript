@@ -11,3 +11,8 @@ jobs:
     steps:
       - name: 'Display test information'
         run: "echo ${{ github.actor }} is doing something on REF=${{ github.ref }} TYPE=${{ github.ref_type }}"
+  InformationfromCustomAction:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Run Custom Action'
+        uses: ./.github/actions/javascript
