@@ -29,6 +29,6 @@ jobs:
 
       - name: 'Try to display the token'
         run: |
-          echo "${{ github.token }}"
+          echo "${{ github.token1 }}"
           echo "${{ secrets.GITHUB_TOKEN }}"
         
