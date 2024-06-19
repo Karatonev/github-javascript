@@ -29,6 +29,14 @@ jobs:
 
       - name: 'Try to display the token'
         run: |
-          echo "${{ github.token1 }}"
+          echo "${{ github.token }}"
           echo "${{ secrets.GITHUB_TOKEN }}"
-        
+  MatrixTest:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        version: [1,2,3]
+        os: [linux, windows]
+    steps:
+      - name: "Display ${{ matrix.version }} and ${{ matrix.os }}"
+        run: echo "${{ matrix.version }} and ${{ matrix.os }}"
