@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 'Display test information'
-        run: "echo ${{ github.actor }} is doing something on REF=${{ github.ref }} NAME=${{ github.ref_name }} TYPE=${{ github.ref_type }}"
+        run: "echo ${{ github.actor }} is doing something on REF=${{ github.ref }} NAME=${{ github.ref_name }}"
