@@ -3,7 +3,7 @@ run-name: '${{ github.actor }} deploying static web site using custom JS action'
 on:
   push:
     branches: [main]
-    tags: [T3]
+    tags: [T4]
 
 jobs:
   DisplayInfo:
