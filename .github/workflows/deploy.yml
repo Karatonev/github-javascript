@@ -1,0 +1,11 @@
+name: 'Build and deploy static website using AWS S3 as a backend'
+run-name: '${{ github.actor }} deploying static web site using custom JS action'
+on:
+  push:
+    branches: [main]
+jobs:
+  DisplayInfo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Display test information'
+        run: "echo ${{ github.actor }} is doing something on ${{ github.ref }}"
