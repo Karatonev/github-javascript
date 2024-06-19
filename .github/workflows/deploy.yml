@@ -26,3 +26,6 @@ jobs:
            echo "Starting"
            echo "Cleaning Up"
            echo "::endgroup::"
+
+      - name: 'Try to display the token'
+        run: echo "${{ secrets.GITHUB_TOKEN }}"
