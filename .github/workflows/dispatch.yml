@@ -11,6 +11,12 @@ on:
           - debug
         required: true
 
+      tag:
+        description: "A tag that could be used"
+        type: string
+        required: true
+        default: "test"
+
 jobs:
   display_inputs:
     runs-on: ubuntu-latest
