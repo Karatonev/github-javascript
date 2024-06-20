@@ -7,19 +7,21 @@ on:
 jobs:
   test_job:
     runs-on: ubuntu-latest
+    outputs:
+      test_job_output: ${{steps.myoutput.outputs.test_job_output}}
     steps:
 
       - name: Display Something
         run: echo "Success"
 
       - name: Set output for a job
+        id: myoutput
         run: echo "test_job_output=test_job_output_value">> $GITHUB_OUTPUT
 
 
   new_job:
     runs-on: ubuntu-latest
-    needs: test_job
     steps:
 
       - name: Display the output from another job
-        run: echo ${{ needs.test_job.outputs.test_job_output }}
+        run: echo ${{ jobs.test_job.outputs.test_job_output }}
