@@ -17,4 +17,4 @@ jobs:
     steps:
 
       - name: Display the actual input
-        run: echo  ${{ on.workflow_dispatch.inputs.options }}
+        run: echo  ${{ inputs.log_level }}
