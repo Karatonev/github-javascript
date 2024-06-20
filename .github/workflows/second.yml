@@ -24,4 +24,4 @@ jobs:
     steps:
 
       - name: Display the output from another job
-        run: echo ${{ jobs.test_job.outputs.test_job_output }}
+        run: echo ${{ needs.test_job.outputs.test_job_output }}
