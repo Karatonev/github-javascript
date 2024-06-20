@@ -19,7 +19,7 @@ jobs:
     uses: Karatonev/called_workflows/.github/workflows/called_workflow.yml@main
     with:
       input1: hristo
-    secrets: inherit
+    #secrets: inherit
 
   display_output_from_called_workflow:
     needs: calling_another_workflow
