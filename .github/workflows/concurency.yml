@@ -1,0 +1,16 @@
+name: "Testing concurency for the workflows within one group"
+on:
+  push:
+    branches: [main]
+concurrency:
+  group: 'my-concurency-group'
+  cancel-in-progress: true
+
+jobs:
+
+  cjob:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: "A test step into the job in concurrent workflow"
+        run: echo something
