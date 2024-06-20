@@ -15,9 +15,11 @@ jobs:
       - name: Set output for a job
         run: echo "test_job_output=test_job_output_value">> $GITHUB_OUTPUT
 
+
   new_job:
     runs-on: ubuntu-latest
+    needs: test_job
     steps:
 
       - name: Display the output from another job
-        run: echo ${{ jobs.test_job.outputs.test_job_output }}
+        run: echo ${{ needs.test_job.outputs.test_job_output }}
