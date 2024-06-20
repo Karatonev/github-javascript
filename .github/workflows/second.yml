@@ -10,4 +10,14 @@ jobs:
     steps:
 
       - name: Display Something
-        run: echo "Sucess"
+        run: echo "Success"
+
+      - name: Set output for a job
+        run: echo "test_job_output=test_job_output_value">> $GITHUB_OUTPUT
+
+  new_job:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Display the output from another job
+        run: echo ${{ jobs.test_job.outputs.test_job_output }}
