@@ -24,3 +24,6 @@ jobs:
 
       - name: Display the actual input
         run: echo  ${{ inputs.log_level }}
+
+      - name: Display the actual input for tag
+        run: echo "the chosen tag is ${{ inputs.tag }}"
