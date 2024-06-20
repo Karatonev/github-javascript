@@ -15,6 +15,9 @@ jobs:
       - name: "A test step into the job in concurrent workflow"
         run: echo something
 
+  calling_another_workflow:
+    uses: Karatonev/called_workflows/.github/workflows/called_workflow.yml
+
   docker-action:
     runs-on: ubuntu-latest
     container: node:20
