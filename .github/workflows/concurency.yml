@@ -16,7 +16,7 @@ jobs:
         run: echo something
 
   calling_another_workflow:
-    uses: Karatonev/called_workflows/.github/workflows/called_workflow.yml
+    uses: Karatonev/called_workflows/.github/workflows/called_workflow.yml@main
 
   docker-action:
     runs-on: ubuntu-latest
