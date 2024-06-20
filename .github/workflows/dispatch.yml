@@ -1,0 +1,20 @@
+name: 'This is a workflow that is triggered by the workflow_dispatch event and utilize inputs'
+on:
+  workflow_dispatch:
+    inputs:
+      log_level:
+        description: "Choose the verbosity of the logs"
+        type: choice
+        options:
+          - info
+          - warning
+          - debug
+        required: true
+
+jobs:
+  display_inputs:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Display the actual input
+        run: echo  ${{ workflow_dispatch.inputs.options }}
