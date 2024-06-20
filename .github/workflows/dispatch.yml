@@ -15,7 +15,7 @@ on:
         description: "A tag that could be used"
         type: string
         required: true
-        default: "test"
+        default: "test_branch"
 
 jobs:
   display_inputs:
