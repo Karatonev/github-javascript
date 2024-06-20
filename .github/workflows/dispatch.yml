@@ -17,4 +17,4 @@ jobs:
     steps:
 
       - name: Display the actual input
-        run: echo  ${{ workflow_dispatch.inputs.options }}
+        run: echo  ${{ on.workflow_dispatch.inputs.options }}
