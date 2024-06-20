@@ -2,9 +2,9 @@ name: "Testing concurency for the workflows within one group"
 on:
   push:
     branches: [main]
-concurrency:
-  group: 'my-concurency-group'
-  cancel-in-progress: true
+#concurrency:
+#  group: 'my-concurency-group'
+#  cancel-in-progress: true
 
 jobs:
 
