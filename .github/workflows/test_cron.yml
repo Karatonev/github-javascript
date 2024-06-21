@@ -1,7 +1,6 @@
-name: This workflow will be triggered on a schedule basis
+name: Pure informational workflow
 on:
-  schedule:
-    - cron: "*/5  * * * *"
+  push:
 jobs:
     information:
       runs-on: ubuntu-latest
@@ -11,6 +10,9 @@ jobs:
 
         - name: Github SHA
           run: echo "${{ github.sha }}"
+
+        - name: Display SHA using default environment variable
+          run: echo $GITHUB_WORKFLOW_SHA
 
         - name: Github Event Name
           run: echo "${{ github.event_name }}"
