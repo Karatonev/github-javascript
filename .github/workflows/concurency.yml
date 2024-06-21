@@ -43,7 +43,7 @@ jobs:
       group: group1
       cancel-in-progress: true
     steps:
-      - name: step1
+      - name: Display SHA
         run: echo "The sha of the commit that triggered the workflow ${{ github.sha }}"
 
       - name: step2
