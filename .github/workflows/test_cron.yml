@@ -1,0 +1,16 @@
+name: This workflow will be triggered on a schedule basis
+on:
+  schedule:
+    - cron: "*/5  * * * *"
+jobs:
+    information:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Workflow name
+          run: echo "${{ github.workflow }}"
+
+        - name: Github SHA
+          run: echo "${{ github.sha }}"
+
+        - name: Github Event Name
+          run: echo "${{ github.event_name }}"
