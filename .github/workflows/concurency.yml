@@ -44,55 +44,55 @@ jobs:
       cancel-in-progress: true
     steps:
       - name: step1
-        run: echo "This is a step1 in job1"
+        run: echo "The sha of the commit that triggered the workflow ${{ github.sha }}"
 
       - name: step2
         run: echo "This is a step2 in job1"
-
-  job2:
-    runs-on: ubuntu-latest
-    concurrency:
-      group: group1
-
-    steps:
-      - name: step1
-        run: echo "This is a step1 in job2"
-
-      - name: step2
-        run: echo "This is a step2 in job2"
-
-  job3:
-    runs-on: ubuntu-latest
-    concurrency:
-      group: group1
-
-    steps:
-      - name: step1
-        run: echo "This is a step1 in job3"
-
-      - name: step2
-        run: echo "This is a step2 in job3"
-
-  job4:
-    runs-on: ubuntu-latest
-    concurrency:
-      group: group1
-
-    steps:
-      - name: step1
-        run: echo "This is a step1 in job4"
-
-      - name: step2
-        run: echo "This is a step2 in job4"
-
-  job5:
-    runs-on: ubuntu-latest
-    concurrency:
-      group: group1
-
-    steps:
-      - name: step1
-        run: echo "This is a step1 in job5"
-
-      - name: step2
-        run: echo "This is a step2 in job5"
+#
+#  job2:
+#    runs-on: ubuntu-latest
+#    concurrency:
+#      group: group1
+#
+#    steps:
+#      - name: step1
+#        run: echo "This is a step1 in job2"
+#
+#      - name: step2
+#        run: echo "This is a step2 in job2"
+#
+#  job3:
+#    runs-on: ubuntu-latest
+#    concurrency:
+#      group: group1
+#
+#    steps:
+#      - name: step1
+#        run: echo "This is a step1 in job3"
+#
+#      - name: step2
+#        run: echo "This is a step2 in job3"
+#
+#  job4:
+#    runs-on: ubuntu-latest
+#    concurrency:
+#      group: group1
+#
+#    steps:
+#      - name: step1
+#        run: echo "This is a step1 in job4"
+#
+#      - name: step2
+#        run: echo "This is a step2 in job4"
+#
+#  job5:
+#    runs-on: ubuntu-latest
+#    concurrency:
+#      group: group1
+#
+#    steps:
+#      - name: step1
+#        run: echo "This is a step1 in job5"
+#
+#      - name: step2
+#        run: echo "This is a step2 in job5"
