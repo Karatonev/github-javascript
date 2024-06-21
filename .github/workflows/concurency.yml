@@ -83,3 +83,15 @@ jobs:
 
       - name: step2
         run: echo "This is a step2 in job4"
+
+  job5:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: group1
+
+    steps:
+      - name: step1
+        run: echo "This is a step1 in job5"
+
+      - name: step2
+        run: echo "This is a step2 in job5"
