@@ -1,4 +1,4 @@
-name: "Testing concurency for the workflows within one group"
+#name: "Testing concurency for the workflows within one group"
 on:
   push:
     branches: [main]
