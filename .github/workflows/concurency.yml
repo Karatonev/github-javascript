@@ -1,4 +1,4 @@
-#name: "Testing concurency for the workflows within one group"
+name: "Testing concurency for the workflows within one group"
 on:
   push:
     branches: [main]
@@ -48,6 +48,9 @@ jobs:
 
       - name: step2
         run: echo "This is a step2 in job1"
+
+      - name: Display the name of the workflow
+        run: echo ${{ github.workflow }}
 #
 #  job2:
 #    runs-on: ubuntu-latest
