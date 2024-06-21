@@ -41,6 +41,7 @@ jobs:
     runs-on: ubuntu-latest
     concurrency:
       group: group1
+      cancel-in-progress: true
     steps:
       - name: step1
         run: echo "This is a step1 in job1"
