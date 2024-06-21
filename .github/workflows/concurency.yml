@@ -36,3 +36,38 @@ jobs:
       - run: |
           node --version
           npm --version
+
+  job1:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: group1
+    steps:
+      - name: step1
+        run: echo "This is a step1 in job1"
+
+      - name: step2
+        run: echo "This is a step2 in job1"
+
+  job2:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: group1
+
+    steps:
+      - name: step1
+        run: echo "This is a step1 in job2"
+
+      - name: step2
+        run: echo "This is a step2 in job2"
+
+  job3:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: group1
+
+    steps:
+      - name: step1
+        run: echo "This is a step1 in job3"
+
+      - name: step2
+        run: echo "This is a step2 in job3"
