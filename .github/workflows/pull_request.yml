@@ -1,9 +1,11 @@
 name: Trigger by a pull request
 on:
-  pull_request:
+  pull_request_target:
+    branches:
+      - main
 jobs:
   information:
     runs-on: ubuntu-latest
     steps:
-      - name: Display workflow information
-        run: echo ${{ github.workflow }}
+      - name: PR Information
+        run: echo "${{ github.event.number }}"
