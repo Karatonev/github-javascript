@@ -5,5 +5,5 @@ jobs:
   information:
     runs-on: ubuntu-latest
     steps:
-      - name: Display workflow information
-        run: echo ${{ github.workflow }}
+      - name: PR Information
+        run: echo ${{ tojson(github.event) }}
