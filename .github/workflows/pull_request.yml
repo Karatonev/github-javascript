@@ -1,6 +1,8 @@
 name: Trigger by a pull request
 on:
   pull_request_target:
+    types:
+      - opened
     branches:
       - main
 jobs:
