@@ -1,8 +1,10 @@
 name: Exercise for variables
-on: [push,workflow_dispatch]
+on: [workflow_dispatch]
 env:
   WORKFLOW_VAR: 'I Am a workflow var'
   OVERWRITTEN: 'I will be overwritten'
+
+
 jobs:
   echo:
     runs-on: ubuntu-latest
@@ -24,3 +26,14 @@ jobs:
         env:
           OVERWRITTEN: "I have been overwriten at the step level"
         run: echo "Step env var ${{ env.OVERWRITTEN }}"
+
+
+  Practicing_Org_Env_Repo_variables:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Display ORG variables
+        run: |
+          echo ${{ vars.ORG_VAR }}
+          echo ${{ vars.OVERWRITTEN_VAR }}
+          
