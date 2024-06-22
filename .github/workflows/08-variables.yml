@@ -1,20 +1,20 @@
 name: Exercise for variables
 on: [push,workflow_dispatch]
 env:
-  WORKFLOW_VAR='I Am a workflow var'
-  OVERWRITTEN='I will be overwritten'
+  WORKFLOW_VAR: 'I Am a workflow var'
+  OVERWRITTEN: 'I will be overwritten'
 jobs:
   echo:
     runs-on: ubuntu-latest
     env:
-      JOB_VAR='I am a job var'
-      OVERWRITTEN='I have been overwritten at the job level'
+      JOB_VAR: 'I am a job var'
+      OVERWRITTEN: "I have been overwritten at the job level"
     steps:
 
       - name: Print Env Variables
         env:
-          STEP_VAR='I am a step env var'
-          step_var2='I am another step var'
+          STEP_VAR: 'I am a step env var'
+          step_var2: 'I am another step var'
         run: |
           echo "Step env var: $STEP_VAR"
           echo "Job env var: $JOB_VAR"
