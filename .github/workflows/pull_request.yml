@@ -1,0 +1,9 @@
+name: Trigger by a pull request
+on:
+  pull_request:
+jobs:
+  information:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display workflow information
+        run: echo ${{ github.workflow }}
