@@ -1,0 +1,33 @@
+name: Testing Lab for using expressions
+on:
+  push:
+  workflow_dispatch:
+    inputs:
+      debug:
+        type: boolean
+        default: false
+        description: Debug level
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: [debug] Print start-up data
+        if: "${{ inputs.debug }}=='true'"
+        run: |
+          echo "Triggered by: ${{ github.event_name }}"
+          echo "Branch: ${{ github.ref }}"
+          echo "Commit SHA: ${{ github.sha }} and $GITHUB_WORKFLOW_SHA"
+          echo "Runner OS: $RUNNER_OS"
+
+      - name: [debug] Print when triggered from main
+        if: "${{ inputs.debug }}=='true' && github.ref='refs/heads/main"
+        run: echo "I was triggered from main"
+
+      - name: Greeting
+        run: echo "Hello World"
+
+
+
+
+
+
