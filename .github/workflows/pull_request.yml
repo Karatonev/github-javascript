@@ -1,9 +1,11 @@
 name: Trigger by a pull request
 on:
-  pull_request:
+  pull_request_target:
+    branches:
+      - main
 jobs:
   information:
     runs-on: ubuntu-latest
     steps:
       - name: PR Information
-        run: echo ${{ tojson(github.event) }}
+        run: echo ${{ tojson(github.event.number) }}
