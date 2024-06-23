@@ -6,12 +6,12 @@ on:
     inputs:
       base-branch:
         description: The branch used as the base to dependency update checks.
-        default: 'main'
+        default: main
         required: false
 
       target-branch:
         description: The branch from which the PR is created.
-        default: 'update-dependencies'
+        default: update-dependencies
         required: false
 
       working-directory:
