@@ -38,3 +38,4 @@ jobs:
           target-branch: inputs.target-branch
           working-directory: inputs.working-directory
           debug: inputs.debug
+          gh-token: ${{ secrets.github_token }}
