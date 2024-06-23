@@ -26,7 +26,7 @@ runs:
        #key: node-modules-${{ hashfiles('${{ inputs.working-dir }}/package-lock.json') }}
 
     - name: Install Dependencies
-      if: cache.outputs.cache-hit != 'true'
+      if: jobs.cache.outputs.cache-hit != 'true'
       run: npm ci
       shell: bash
       working-directory: ${{}}
