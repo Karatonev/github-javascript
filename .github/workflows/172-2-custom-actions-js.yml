@@ -32,7 +32,7 @@ jobs:
       - name: Check for dependency updates
         uses: ./.github/actions/js-dependency-update
         with:
-          base-branch: inputs.base-branch
-          target-branch: inputs.target-branch
-          working-directory: inputs.working-directory
+          base-branch: ${{ inputs.base-branch }}
+          target-branch: ${{ inputs.target-branch }}
+          working-directory: ${{ inputs.working-directory }}
           gh-token: ${{ secrets.github_token }}
