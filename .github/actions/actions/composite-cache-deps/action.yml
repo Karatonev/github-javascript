@@ -29,4 +29,4 @@ runs:
       if: jobs.cache.outputs.cache-hit != 'true'
       run: npm ci
       shell: bash
-      working-directory: ${{}}
+      working-directory:  ${{ inputs.working-dir }}
