@@ -2,11 +2,11 @@ name: 16 - Working with Environments
 run-name: 16 - Working with Environments | env - ${{ inputs.target_environment }}
 on:
   workflow_dispatch:
-    inputs:
-      target_environment:
-        type: environment
-        default: staging
-        description: Input for the target environment
+#    inputs:
+#      target_environment:
+#        type: environment
+#        default: staging
+#        description: Input for the target environment
 
 jobs:
   echo:
@@ -17,3 +17,11 @@ jobs:
     steps:
       - name: Echo vars
         run: echo Env variable $MY_ENV_VALUE
+
+
+  deploy_to_prod:
+    runs-on: ubuntu-latest
+    environment: prod
+    steps:
+      - name: Deploying to prod
+        run: echo "Success"
