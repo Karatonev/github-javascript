@@ -12,3 +12,7 @@ inputs:
   bucket_name:
     description: Enter the bucket name to be created
     required: true
+
+outputs:
+  DOCKER_OUTPUT_01:
+    description: Output that should come from inside the container
