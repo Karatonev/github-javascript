@@ -1,0 +1,12 @@
+name: Experiment
+on: [push]
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    container: { image: alpine }
+    steps:
+    - run: uname -a
+    - run: cat /etc/alpine-release
+    - run: touch /hello
+    - run: ls /
