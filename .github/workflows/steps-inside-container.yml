@@ -4,9 +4,7 @@ on: [push]
 jobs:
   debug:
     runs-on: ubuntu-latest
-    container:
-      image:
-        alpine
+    container: alpine
     steps:
     - run: uname -a
     - run: cat /etc/alpine-release
