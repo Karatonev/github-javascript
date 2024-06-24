@@ -22,4 +22,10 @@ jobs:
 
 
       - name: Actual run
+        id: docker
         uses: ./.github/actions/docker-test
+
+      - name: Display the output from docker action
+        run: echo ${{ steps.docker.outputs.DOCKER_OUTPUT_01 }}
+
+
