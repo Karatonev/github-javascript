@@ -2,6 +2,7 @@ name: This is a worklow which is utilizing custom docker action
 run-name: ${{ github.actor }} is executing ${{ github.workflow }} on ${{ github.ref_name }}
 on:
   workflow_dispatch:
+    permissions: write
     inputs:
       aws_region:
         type: string
