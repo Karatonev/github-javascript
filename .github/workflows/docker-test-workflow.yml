@@ -1,5 +1,5 @@
 name: This is a worklow which is utilizing custom docker action
-run-name: ${{ github.actor }} is executing ${{ github.workflow }} on ${{ github_ref_name }}
+run-name: ${{ github.actor }} is executing ${{ github.workflow }} on ${{ github.ref_name }}
 on:
   workflow_dispatch:
     inputs:

@@ -12,4 +12,3 @@ inputs:
   bucket_name:
     description: Enter the bucket name to be created
     required: true
-git add
