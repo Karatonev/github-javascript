@@ -22,4 +22,4 @@ jobs:
 
 
       - name: Actual run
-        uses: ./github/actions/docker-test
+        uses: ./.github/actions/docker-test
