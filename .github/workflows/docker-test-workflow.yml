@@ -1,0 +1,21 @@
+name: This is a worklow which is utilizing custom docker action
+run-name: ${{ github.actor }} is executing ${{ github.workflow }} on ${{ github_ref_name }}
+on:
+  workflow_dispatch:
+    inputs:
+      aws_region:
+        type: string
+        default: eu-west-1
+        description: AWS Region for delpoyment
+
+      bucket_name:
+        type: S3 Bucket Name
+        description: The name of the S3 Bucket to be created.
+
+jobs:
+  invoke_custom_docker_action:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Actual run
+        uses: ./github/actions/docker-test

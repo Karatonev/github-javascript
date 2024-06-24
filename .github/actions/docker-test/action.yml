@@ -1,0 +1,15 @@
+name: This is a test Docker Action
+description: The self made docker action
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+
+inputs:
+  aws_region:
+    description: AWS Region for the deployment
+    required: true
+
+  bucket_name:
+    description: Enter the bucket name to be created
+    required: true
+git add

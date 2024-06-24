@@ -1,10 +1,17 @@
-name: Experiment
+name: Running steps inside docker container
+run-name: ${{ github.actor }} is testing steps running inside a container image.
 on: [push]
 
 jobs:
   debug:
     runs-on: ubuntu-latest
-    container: alpine
+    container: node:20
+    ports:
+      - 80
+    volumes:
+      - my_docker_volume:/volume_mount
+    options: --cpus 1
+
     steps:
     - run: uname -a
     - run: cat /etc/alpine-release
