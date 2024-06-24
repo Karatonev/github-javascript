@@ -1,4 +1,4 @@
 import os
 print ("Hello World")
-print(os.environ['INPUT_BUCKET'])
-#print(os.environ)
+print(os.environ['BUCKET_NAME'])
+print(os.environ['AWS_REGION'])
